@@ -6,14 +6,14 @@ services:
     ports:
       - "80:80"
     environment:
-      - PORT: 9315
-      - PROXY: "请修改我为一个通用的代理池子，比如http://user:pass@ip:port"
-      - APP_LICENSE: "请修改我作为你的 LICENSE"
-      - AUTH_KEY: "-"
-      - REDIS_HOST: redis
-      - REDIS_PORT: 6379
-      - REDIS_ENABLE: true
-      - REDIS_DB: 0
+      PORT: 9315
+      PROXY: "请修改我为一个通用的代理池子，比如http://user:pass@ip:port"
+      APP_LICENSE: "请修改我作为你的 LICENSE"
+      AUTH_KEY: "-"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_ENABLE: true
+      REDIS_DB: 0
     restart: unless-stopped
   redis:
     image: redis
