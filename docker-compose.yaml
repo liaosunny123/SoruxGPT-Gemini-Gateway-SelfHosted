@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  soruxconnect:
+    image: epicmo/soruxgpt_gemini_gateway:latest
+    ports:
+      - "80:80"
+    environment:
+      - PORT: 9315
+      - PROXY: "请修改我为一个通用的代理池子，比如http://user:pass@ip:port"
+      - APP_LICENSE: "请修改我作为你的 LICENSE"
+      - GATEWAY_ADDRESS: "请填写我为你的域名，比如gemini.soruxgpt.com"
+      - AUTH_KEY: "-"
+      - REDIS_HOST: redis
+      - REDIS_PORT: 6379
+      - REDIS_ENABLE: true
+      - REDIS_DB: 0
+    restart: unless-stopped
+  redis:
+    image: redis
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./data/redis/:/data/
