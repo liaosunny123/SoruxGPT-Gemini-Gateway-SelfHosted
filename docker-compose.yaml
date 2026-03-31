@@ -9,6 +9,7 @@ services:
       PORT: 9315
       PROXY: "请修改我为一个通用的代理池子，比如http://user:pass@ip:port"
       APP_LICENSE: "请修改我作为你的 LICENSE"
+      HOST_SHARE_DOMAIN: "请修改我为你的 Share 的 Domain，如果有多个只需要其中的一个"
       AUTH_KEY: "-"
       REDIS_HOST: redis
       REDIS_PORT: 6379
