@@ -4,7 +4,7 @@ services:
   soruxconnect:
     image: epicmo/soruxgpt_gemini_gateway:latest
     ports:
-      - "80:80"
+      - "9315:9315"
     environment:
       PORT: 9315
       PROXY: "请修改我为一个通用的代理池子，比如http://user:pass@ip:port"
